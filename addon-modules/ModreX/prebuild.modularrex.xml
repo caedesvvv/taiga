@@ -1,0 +1,63 @@
+    <Project name="ModularRex" path="./addon-modules/ModreX/ModularRex/" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+	 <ReferencePath>../../../bin/</ReferencePath>
+         <ReferencePath>bin/</ReferencePath>
+	 <Reference name="ModularRex.RexFramework"/>
+	 <Reference name="RexDotMeshLoader"/>
+	 <Reference name="OgreSceneImporter"/>
+	 <Reference name="ModularRex.NHibernate"/>
+	 <Reference name="Ionic.Zip"/>
+	 <Reference name="OpenSim.Region.CoreModules.dll"/>
+	 <Reference name="IronPython.dll" localCopy="true"/>
+      <Reference name="IronPython.Modules.dll" localCopy="true"/>
+	  <Reference name="Microsoft.Scripting.dll" localCopy="true"/>
+	  <Reference name="Microsoft.Scripting.Core.dll" localCopy="true"/>
+	  <Reference name="Microsoft.Scripting.ExtensionAttribute.dll" localCopy="true"/>
+	 <Reference name="log4net.dll"/>
+	 <Reference name="Nini.dll" />
+	 <Reference name="OpenMetaverse.dll"/>
+	 <Reference name="OpenMetaverse.StructuredData.dll"/>
+	 <Reference name="OpenMetaverseTypes.dll"/>
+	 <Reference name="OpenSim"/>
+     <Reference name="OpenSim.Services.Interfaces"/>
+	 <Reference name="OpenSim.Server.Handlers"/>
+	 <Reference name="OpenSim.Framework.dll"/>
+	 <Reference name="OpenSim.Framework.Capabilities"/>
+	 <Reference name="OpenSim.Framework.Communications"/>
+	 <Reference name="OpenSim.Framework.Console"/>
+	 <Reference name="OpenSim.Framework.Servers"/>
+	 <Reference name="OpenSim.Framework.Servers.HttpServer"/>
+	 <Reference name="OpenSim.Framework.Statistics"/>
+	 <Reference name="OpenSim.Region.ClientStack.dll"/>
+	 <Reference name="OpenSim.Region.ClientStack.LindenUDP"/>
+	 <Reference name="OpenSim.Region.Communications.Local"/>
+	 <Reference name="OpenSim.Region.Framework"/>
+	 <Reference name="OpenSim.Region.Physics.Manager"/>
+	 <Reference name="OpenSim.Region.ScriptEngine.Shared"/>
+	 <Reference name="OpenSim.Region.ScriptEngine.Shared.Api"/>
+	 <Reference name="OpenSim.Region.CoreModules.dll"/>
+	 <Reference name="System" localCopy="false"/>
+	 <Reference name="System.Data"/>
+	 <Reference name="System.Xml"/>
+	 <Reference name="XMLRPC.dll"/>
+      <Files>
+        <Match pattern="*.cs" recurse="false"/>
+        <Match path="Properties" pattern="*.cs" recurse="false"/>
+        <Match path="RexNetwork" pattern="*.cs" recurse="true"/>
+        <Match path="RexNetwork/Resources" pattern="*.xml" buildAction="EmbeddedResource"/>
+        <Match path="RexParts" pattern="*.cs" recurse="true"/>
+        <Match path="RexDBObjects" pattern="*.cs" recurse="true"/>
+        <Match path="addon-modules/ModreX/config" pattern="modrex.ini" copyToOutput="PreserveNewest" buildAction="None" preservePath="true"/>
+        <Match path="ScriptEngines" pattern="*.py" recurse="true" copyToOutput="PreserveNewest" buildAction="None" preservePath="true"/>
+      </Files>
+    </Project>
